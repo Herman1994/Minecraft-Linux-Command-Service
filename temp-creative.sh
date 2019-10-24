@@ -42,7 +42,7 @@ mkdir $tempDir/
 cp -rvf $minecraftDir/ $tempDir/
 
 # The server is now running in its temporary mode.
-./mc-start.sh
+./start.sh
 sleep 10
 screen -p 0 -S minecraft -X eval "stuff \"say The server is now in TNT mode.\"\015"
 sleep 1
@@ -93,4 +93,4 @@ rm -rvf $minecraftDir
 mv $tempDir $minecraftDir
 
 # Restart the server. This time, normal.
-./mc-start.sh
+./start.sh
