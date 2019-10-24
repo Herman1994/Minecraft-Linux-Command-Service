@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Minecraft Script to view all authentications to the server
-# Github: https://github.com/cranstonide/linux-minecraft-scripts
+# Github: https://github.com/Herman1994/Minecraft-Linux-Comand-Service/
 
 # Move into the directory with all Linux-Minecraft-Scripts
 cd "$( dirname $0 )"
