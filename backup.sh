@@ -7,7 +7,7 @@
 cd "$( dirname $0 )"
 
 # Read configuration file
-source mc-config.cfg
+source config.cfg
 
 # We need to first put the server in readonly mode to reduce the chance of backing up half of a chunk.
 screen -p 0 -S minecraft -X eval "stuff \"save-off\"\015"
