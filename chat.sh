@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # Minecraft Script to view live chatlog of players
-# Github: https://github.com/cranstonide/linux-minecraft-scripts
+# Github: https://github.com/Herman1994/Minecraft-Linux-Comand-Service/
 
 # Move into the directory with all Linux-Minecraft-Scripts
 cd "$( dirname $0 )"
 
 # Read configuration file
-source mc-config.cfg
+source config.cfg
 
 # How far back do you want to start? (In lines)
 # A bigger number may cause your screen to flash.
