@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Minecraft Backup Script
-# Github: https://github.com/cranstonide/linux-minecraft-scripts
+# Github: https://github.com/Herman1994/Minecraft-Linux-Comand-Service/
 
 # Move into the directory with all Linux-Minecraft-Scripts
 cd "$( dirname $0 )"
@@ -10,8 +10,8 @@ cd "$( dirname $0 )"
 source mc-config.cfg
 
 # We need to first put the server in readonly mode to reduce the chance of backing up half of a chunk.
-screen -p 0 -S svr1-main -X eval "stuff \"save-off\"\015"
-screen -p 0 -S svr1-main -X eval "stuff \"save-all\"\015"
+screen -p 0 -S minecraft -X eval "stuff \"save-off\"\015"
+screen -p 0 -S minecraft -X eval "stuff \"save-all\"\015"
 
 # Wait a few seconds to make sure that Minecraft has finished backing up.
 sleep 5
@@ -28,11 +28,11 @@ rm -rvf $backupDest/$serverNick-$backupStamp.tar.gz
 tar -cvzf $backupDest/$serverNick-$backupStamp.tar.gz $minecraftDir/*
 
 # Don't forget to take the server out of readonly mode.
-screen -p 0 -S svr1-main -X eval "stuff \"save-on\"\015"
+screen -p 0 -S minecraft -X eval "stuff \"save-on\"\015"
 
 # Wait a second for the gnu-screen to allow another stuffing and optionally alert users that the backup has been completed.
 sleep 1
-screen -p 0 -S svr1-main -X eval "stuff \"say Server byl uspěšně zálohován!\"\015"
+screen -p 0 -S minecraft -X eval "stuff \"say Server byl uspěšně zálohován!\"\015"
 
 # (Optionally) Remove all old (older than 7 days) backups to cut down on disk utilization.
 find $backupDest* -mtime +7 -exec rm {} -fv \;
