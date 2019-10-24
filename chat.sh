@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Minecraft Script to view live chatlog of players
-# Github: https://github.com/Herman1994/Minecraft-Linux-Comand-Service/
+# Github: https://github.com/Herman1994/Minecraft-Linux-Command-Service/
 
 # Move into the directory with all Linux-Minecraft-Scripts
 cd "$( dirname $0 )"
