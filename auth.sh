@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # Minecraft Script to view all authentications to the server
-# Github: https://github.com/Herman1994/Minecraft-Linux-Comand-Service/
+# Github: https://github.com/Herman1994/Minecraft-Linux-Command-Service/
 
 # Move into the directory with all Linux-Minecraft-Scripts
 cd "$( dirname $0 )"
 
 # Read configuration file
-source mc-config.cfg
+source config.cfg
 
 # How far back do you want to start? (In lines)
 # A bigger number may cause your screen to flash.
